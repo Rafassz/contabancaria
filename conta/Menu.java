@@ -13,10 +13,10 @@ public class Menu {
 		 * 10000.0f); conta1.visualizar(); conta1.sacar(12000.0f); conta1.visualizar();
 		 * conta1.depositar(5000.0f); conta1.visualizar();
 		 */
-
+		Conta conta1 = new Conta();
 		Scanner scanner = new Scanner(System.in);
 
-		int opcao;
+		int opcao, opcaocriar;
 
 		while (true) {
 
@@ -52,7 +52,28 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_WHITE + "Criar Conta\n\n");
+				System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
+						+ "*****************************************************");
+				System.out.println(Cores.TEXT_WHITE + "                    CRIAR CONTA                      \n\n");
+				System.out.println("            1 - Conta Corrente                       ");
+				System.out.println("            2 - Conta Poupança                       ");
+				opcaocriar = scanner.nextInt();
+
+				switch (opcaocriar) {
+
+				case 1:
+					System.out.println(Cores.TEXT_WHITE + "            CONTA CORRENTE SELECIONADA               \n\n");
+					System.out.println("Digite seu Nome Completo: ");
+					conta1.setTitular(scanner.nextLine());
+					System.out.println("\nDigite seu CPF: ");
+					conta1.setCPF(scanner.nextFloat());
+
+					break;
+				case 2:
+					System.out.println(Cores.TEXT_WHITE + "            CONTA POUPANÇA SELECIONADA               \n\n");
+
+					break;
+				}
 
 				break;
 			case 2:
