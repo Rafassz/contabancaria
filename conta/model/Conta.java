@@ -1,21 +1,21 @@
 package conta.model;
 
-public class Conta {
+public abstract class Conta {
 
 	private int numero;
 	private int agencia;
 	private int tipo;
 	private String titular;
 	private float saldo;
-	private float CPF;
+	
 
-	public Conta() {
+	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.tipo = tipo;
 		this.titular = titular;
 		this.saldo = saldo;
-		this.CPF = CPF;
+		
 	}
 
 	public int getNumero() {
@@ -56,14 +56,6 @@ public class Conta {
 
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
-	}
-
-	public float getCPF() {
-		return CPF;
-	}
-
-	public void setCPF(float CPF) {
-		this.CPF = CPF;
 	}
 
 	public boolean sacar(float valor) {
