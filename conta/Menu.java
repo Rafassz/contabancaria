@@ -71,13 +71,12 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_WHITE + "                    CRIAR CONTA                      \n\n");
+				System.out.println(Cores.TEXT_WHITE + "Criar Conta\n\n");
 				
 				System.out.println("Digite o número da Agência: ");
 				agencia = scanner.nextInt();
 				
-				System.out.println(
-);
+				System.out.println();
 				scanner.skip("\\R?");
 				titular = scanner.nextLine();
 				
